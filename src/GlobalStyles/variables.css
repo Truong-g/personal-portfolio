@@ -1,0 +1,10 @@
+:root {
+    --dark-main: #000000;
+    --dark-second: #343434;
+    --light-main: #ffffff;
+    --light-second: #ededed;
+    --header-height-main: 80px;
+    --header-height-shirnk: 80px;
+    --tablet-screen-width: 1024px;
+    --desktop-screen-width: 1120px
+}
