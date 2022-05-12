@@ -1,0 +1,264 @@
+.btn {
+    cursor: pointer;
+    border-radius: var(--border-round);
+    position: relative;
+}
+
+.btn-small {
+    width: 4rem;
+    height: 4rem;
+
+}
+
+.btn-medium {
+    width: 6rem;
+    height: 6rem;
+}
+
+.btn-big {
+    width: 8rem;
+    height: 8rem;
+}
+
+
+.btn-title {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    letter-spacing: 0.2rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: auto;
+    opacity: 0;
+    color: #fff;
+    border-radius: var(--border-round);
+    transition: all 0.15s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .btn-title {
+        display: none;
+    }
+
+    .btn-solid .btn-title {
+        display: flex;
+    }
+}
+
+.theme-dark .btn-title {
+    background-color: var(--yellow-color);
+
+}
+
+.theme-light .btn-title {
+    background-color: var(--green-color);
+
+}
+
+.btn-small .btn-title {
+    height: 4rem;
+    font-size: 1.4rem;
+
+}
+
+.btn-medium .btn-title {
+    height: 6rem;
+    font-size: 1.6rem;
+
+}
+
+.btn-big .btn-title {
+    height: 8rem;
+    font-size: 1.8rem;
+}
+
+.btn-small:hover .btn-title {
+    padding-right: 4rem;
+    opacity: 1;
+
+
+}
+
+.btn-medium:hover .btn-title {
+    padding-right: 6rem;
+    opacity: 1;
+
+
+}
+
+.btn-big:hover .btn-title {
+    padding-right: 8rem;
+    opacity: 1;
+
+
+}
+
+
+
+
+
+
+.btn-icon {
+    border-radius: var(--border-round);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: #fff;
+    transition: background-color 0.15s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.theme-dark .btn-icon {
+    background-color: #323232;
+
+}
+
+.theme-light .btn-icon {
+    background-color: var(--light-second-color);
+    color: #666666
+}
+
+.theme-dark .btn:hover .btn-icon {
+    background-color: var(--yellow-color);
+}
+
+.theme-light .btn:hover .btn-icon {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+.theme-dark .btn-icon.active {
+    background-color: var(--yellow-color);
+}
+
+.theme-light .btn-icon.active {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+
+
+.btn-small .btn-icon {
+
+    font-size: 1.8rem;
+
+}
+
+.btn-medium .btn-icon {
+
+    font-size: 2rem;
+}
+
+.btn-big .btn-icon {
+
+    font-size: 2.2rem;
+}
+
+
+
+/* btn-solid */
+
+.btn.btn-solid {
+    width: auto;
+}
+
+
+.btn-solid .btn-title {
+    position: static;
+    border: 2px solid;
+}
+
+.theme-dark .btn-solid .btn-title {
+    border-color: var(--yellow-color);
+    background: linear-gradient(to right, transparent 50%, var(--yellow-color) 50%);
+    background-position: left bottom;
+    opacity: 1;
+    background-size: 200% 100%;
+    transition: all .5s ease-out;
+
+
+
+}
+
+.theme-light .btn-solid .btn-title {
+    border-color: var(--green-color);
+    background: linear-gradient(to right, transparent 50%, var(--green-color) 50%);
+    background-position: left bottom;
+    background-size: 200% 100%;
+    opacity: 1;
+    color: #666;
+    transition: all .5s ease-out;
+
+}
+
+.theme-dark .btn-solid:hover .btn-title {
+    background-position: right bottom;
+
+}
+
+.theme-light .btn-solid:hover .btn-title {
+    background-position: right bottom;
+    color: #fff;
+
+}
+
+.btn-small.btn-solid .btn-title {
+    padding-right: calc(4rem + 1px);
+}
+
+.btn-medium.btn-solid .btn-title {
+    padding-right: calc(6rem + 1px);
+
+}
+
+.btn-big.btn-solid .btn-title {
+    padding-right: calc(8rem + 1px);
+
+}
+
+
+
+
+.btn-solid.btn-small .btn-icon {
+    width: 4rem;
+    height: 4rem;
+
+
+}
+
+
+.btn-solid.btn-medium .btn-icon {
+    width: 6rem;
+    height: 6rem;
+
+}
+
+.btn-solid.btn-big .btn-icon {
+    width: 8rem;
+    height: 8rem;
+
+}
+
+.theme-dark .btn-solid .btn-icon {
+    background-color: var(--yellow-color);
+
+}
+
+.theme-light .btn-solid .btn-icon {
+    background-color: var(--green-color);
+    color: #fff;
+
+
+}
+
+/* btn-solid */

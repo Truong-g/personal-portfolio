@@ -1,0 +1,46 @@
+
+
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.navbar-item ~ .navbar-item{
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        top: unset;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem 0;
+    }
+
+    :global(.theme-dark) .container{
+        background-color: #2b2a2a;
+    }
+
+    :global(.theme-light) .container {
+        background: #fff;
+        box-shadow: 0 0 47px #dedede;
+    }
+
+    .navbar-list {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+    .navbar-item ~ .navbar-item{
+        margin-top: 0;
+    }
+}

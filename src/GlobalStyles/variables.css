@@ -1,10 +1,11 @@
 :root {
-    --dark-main: #000000;
-    --dark-second: #343434;
-    --light-main: #ffffff;
-    --light-second: #ededed;
-    --header-height-main: 80px;
-    --header-height-shirnk: 80px;
+    --dark-main-color: #111111;
+    --dark-second-color: #000000;
+    --light-main-color: #ffffff;
+    --light-second-color: #ededed;
+    --yellow-color: #ffb400;
+    --green-color: #72b626;
     --tablet-screen-width: 1024px;
-    --desktop-screen-width: 1120px
+    --desktop-screen-width: 1120px;
+    --border-round: 999px;
 }

@@ -1,0 +1,156 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-color {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
+    z-index: 1;
+
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+
+}
+
+.img-card {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 100%;
+    padding-top: 130%;
+    border-radius: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.content-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+}
+
+.content-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.content-title>h1 {
+    line-height: 1.3;
+}
+
+.content-line {
+    width: 20%;
+    margin: 1rem 0;
+    height: 2px;
+    border: var(--border-round);
+}
+
+.content-desc {
+    max-width: 90%;
+
+}
+
+.content-desc>p {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.content-btn {
+    margin-top: 4rem;
+
+}
+
+@media screen and (max-width: 992px) {
+    .block-color {
+        display: none;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .content {
+        margin-top: 3rem;
+    }
+
+    .content-title {
+        font-size: 1.2rem;
+    }
+
+    .content-title>h1 {
+        text-align: center;
+    }
+
+    .content-line {
+        display: none;
+    }
+
+    .content-desc {
+        margin-top: 3rem;
+    }
+
+    .content-desc>p {
+        text-align: center;
+        padding: 0 20px;
+        font-size: 1.2rem;
+    }
+
+    .img-card {
+        width: 100%;
+    }
+
+    .img {
+        width: 60%;
+        padding-top: 60%;
+        border-radius: var(--border-round);
+    }
+
+    .content-card {
+        padding-left: 0;
+        flex: 0;
+    }
+
+    .content-desc {
+        max-width: 100%;
+    }
+
+    .content-btn {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
