@@ -1,0 +1,27 @@
+
+
+.img {
+    width: 100%;
+    padding-top: 130%;
+    border-radius: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid;
+}
+
+:global(.theme-dark) .img {
+    border-color: #323232;
+}
+
+:global(.theme-light) .img {
+    border-color: #ddd;
+}
+
+@media screen and (max-width: 992px) {
+    .img {
+        width: 60%;
+        padding-top: 60%;
+        border-radius: var(--border-round);
+    }
+}

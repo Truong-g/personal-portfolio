@@ -1,0 +1,48 @@
+.item-restangle {
+    width: 100%;
+    position: relative;
+    padding-top: 70%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.item-restangle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+}
+
+.item-restangle-title {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+:global(.theme-light) .item-restangle-title {
+    color: #fff;
+}
+
+.item-restangle:hover .item-restangle-bg {
+    opacity: 1;
+}
+
+.item-restangle:hover .item-restangle-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+

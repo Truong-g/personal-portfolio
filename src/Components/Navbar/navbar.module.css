@@ -1,0 +1,50 @@
+
+
+.navbar-list {
+    display: flex;
+
+}
+
+.navbar-item ~ .navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-item > button {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+:global(.theme-dark) .navbar-item > button {
+    color: var(--light-main-color);
+}
+
+:global(.theme-light) .navbar-item > button {
+    color: #666666
+}
+
+:global(.theme-dark) .navbar-item > button:hover,
+:global(.theme-dark) .navbar-item > button.active
+{
+    color: var(--yellow-color)
+}
+
+:global(.theme-light) .navbar-item > button:hover,
+:global(.theme-light) .navbar-item > button.active {
+    color: var(--green-color)
+}
+
+@media screen and (max-width: 576px) {
+
+    .navbar-list {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .navbar-item > button {
+        font-size: 1.5rem;
+    }
+}

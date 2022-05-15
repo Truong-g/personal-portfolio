@@ -4,12 +4,12 @@ import { Routes, Route } from 'react-router-dom'
 import { HiSun } from 'react-icons/hi'
 import { BsFillMoonFill } from 'react-icons/bs'
 
-import Menu from './Components/Menu/Menu';
 import Button from './Components/Button';
 import './GlobalStyles/index.css';
 
 import routes from './Data/JavascriptData/routes';
 import { ContextApi } from './GlobalStatesComponent/GlobalState';
+import Menu from './Components/Menu';
 
 function App() {
   const { theme, setTheme } = useContext(ContextApi)

@@ -8,4 +8,6 @@
     --tablet-screen-width: 1024px;
     --desktop-screen-width: 1120px;
     --border-round: 999px;
+
+    --modal-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }

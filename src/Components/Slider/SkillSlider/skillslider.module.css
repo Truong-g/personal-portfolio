@@ -1,0 +1,53 @@
+
+
+.skill-list :global(.slick-slide > div) {
+    margin: 0 15px;
+}
+
+.skill-list :global(.slick-list) {
+    margin: 0 -15px;
+}
+
+.skill-item {
+    padding: 15px;
+    border-radius: 5px ;
+    display: flex;
+
+    
+}
+
+.skill-item-icon {
+    font-size: 5rem;
+}
+
+.skill-item-contents {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+:global(.theme-dark) .skill-item {
+    background-color: #323232;
+}
+
+:global(.theme-light) .skill-item {
+    background-color: var(--light-second-color);
+}
+
+.skill-item-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.skill-item-desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 576px) {
+    .skill-item-desc {
+        font-size: 1.3rem;
+    }
+}

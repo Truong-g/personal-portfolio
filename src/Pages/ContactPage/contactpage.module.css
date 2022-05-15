@@ -1,3 +1,106 @@
 .container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+.wrapper {
+    display: flex;
+    margin-bottom: 80px;
+
+}
+
+.col-left {
+    flex: 1;
+    padding-right: 25px;
+}
+
+.col-right {
+    flex: 2;
+    padding-left: 25px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+
+}
+
+.description {
+    line-height: 1.7;
+    font-size: 1.4rem;
+    opacity: 0.8;
+    margin-bottom: 22px;
+}
+
+.contact-infors {
     width: 100%;
+}
+
+.contact-item {
+    display: flex;
+}
+
+.contact-item ~ .contact-item {
+    margin-top: 25px;
+}
+
+.contact-infors-icon {
+    margin-right: 1.5rem;
+    font-size: 5rem;
+}
+
+.contact-infors-content {
+    flex: 1
+}
+
+.contact-infors-title {
+    text-transform: uppercase;
+    opacity: .8;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6;
+
+}
+
+.contact-infors-name {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.contact-socials{
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.contact-socials-item ~ .contact-socials-item {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .col-left {
+        padding-right: 0;
+    }
+    .col-right {
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .contact-socials {
+        justify-content: space-around;
+        margin-bottom: 35px;
+    }
+
+    .contact-socials-item ~ .contact-socials-item {
+        margin-left: 0;
+    }
 }

@@ -8,6 +8,7 @@ import AboutPage from "~/Pages/AboutPage"
 import ContactPage from "~/Pages/ContactPage"
 import HomePage from "~/Pages/HomePage"
 import PortFolioPage from "~/Pages/PortFolioPage"
+import BlogPage from '~/Pages/BlogPage'
 
 
 export default [
@@ -42,7 +43,7 @@ export default [
     {
         title: "Blog",
         icon: FaMicroblog,
-        component: ContactPage,
+        component: BlogPage,
         type: "menu",
         to: "/blog"
     }

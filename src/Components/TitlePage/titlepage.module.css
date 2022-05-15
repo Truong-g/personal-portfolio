@@ -1,0 +1,55 @@
+.wrapper {
+    position: relative;
+    padding: 80px 0;
+
+}
+
+.wrapper.padding-none {
+    padding: 0;
+}
+
+
+.main-title-page {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.sub-title-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 110px;
+    letter-spacing: 10px;
+    line-height: .7;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+:global(.theme-dark) .sub-title-page {
+    color: hsla(0,0%,100%,.07);
+}
+
+:global(.theme-light) .sub-title-page {
+    color: rgba(30,37,48,.07);
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        padding: 50px 0;
+    }
+    .sub-title-page {
+        display: none;
+    }
+    .main-title-page {
+        text-align: left;
+        padding: 0 15px;
+        font-size: 35px;
+    }
+
+}
