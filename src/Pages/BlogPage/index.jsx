@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from './blogpage.module.css'
 
@@ -7,15 +7,27 @@ import TitlePage from "~/Components/TitlePage";
 import WrapperLaypout from "~/Components/Layouts/WrapperLayout";
 import VerticalRestangleItem from "~/Components/RestangleItem/VerticalRestangleItem";
 import BlogModal from "~/Components/Modals/BlogModal";
+import blogs from '~/dummyData/blogs.json'
 
 
 
 var cx = classNames.bind(styles);
 
 function BlogPage() {
+    const [detailPost, setDetailPost] = useState(null)
+
 
     useEffect(() => {
         document.title = "Blog"
+    }, [])
+
+    const handleSelectItem = (id) => {
+        const data = blogs.find(item => item.id === id)
+        setDetailPost(data)
+    }
+
+    const handleCloseModal = useCallback(() => {
+        setDetailPost(null)
     }, [])
 
     return (
@@ -24,17 +36,22 @@ function BlogPage() {
                 <TitlePage firstTitle="my" secondTitle="BLOG" subTitle="posts" />
                 <WrapperLaypout>
                     <div className={cx("list")}>
-                        <VerticalRestangleItem />
-                        <VerticalRestangleItem />
-                        <VerticalRestangleItem />
-                        <VerticalRestangleItem />
-                        <VerticalRestangleItem />
-                        <VerticalRestangleItem />
-
+                        {
+                            blogs.map((item) => (
+                                <div
+                                    key={item.id}
+                                    onClick={() => handleSelectItem(item.id)}>
+                                    <VerticalRestangleItem data={item} />
+                                </div>
+                            ))
+                        }
                     </div>
                 </WrapperLaypout>
 
-                <BlogModal />
+                {
+                    !!detailPost && <BlogModal data={detailPost} onClose={handleCloseModal} />
+                }
+
 
             </div>
         </DefaultLayout>

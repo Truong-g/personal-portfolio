@@ -1,15 +1,18 @@
+import PropTypes from 'prop-types'
+
 import classNames from "classnames/bind";
 import styles from './blogmodal.module.css'
 
 import { FaTimes } from 'react-icons/fa'
 import { BsCalendar3, BsTagsFill } from 'react-icons/bs'
 import { BiCategory } from 'react-icons/bi'
+import { Fragment } from 'react';
 
 
 var cx = classNames.bind(styles);
 
 
-function BlogModal({ onClose = () => { } }) {
+function BlogModal({ data, onClose = () => { } }) {
     return (
         <div className={cx("blog-backdrop")}>
             <div className={cx("blog-modal")}>
@@ -27,7 +30,7 @@ function BlogModal({ onClose = () => { } }) {
                                 <BsCalendar3 />
                             </span>
                             <span className={cx("blog-nav-text")}>
-                                20/7/2022
+                                {data.created_at}
                             </span>
                         </div>
                         <div className={cx("blog-nav-item")}>
@@ -35,7 +38,16 @@ function BlogModal({ onClose = () => { } }) {
                                 <BiCategory />
                             </span>
                             <span className={cx("blog-nav-text")}>
-                                Cam nan, meo, tin cong nghe
+                                {
+                                    data.categories.map((cat, index, arrCurr) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                {index === arrCurr.length - 1 ? cat + ". " : cat + ", "}
+                                            </Fragment>
+                                        )
+                                    })
+                                }
+
                             </span>
                         </div>
                         <div className={cx("blog-nav-item")}>
@@ -43,34 +55,54 @@ function BlogModal({ onClose = () => { } }) {
                                 <BsTagsFill />
                             </span>
                             <span className={cx("blog-nav-text")}>
-                                React js, wordpress, java
+                                {
+                                    data.tags.map((tag, index, arrCurr) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                {index === arrCurr.length - 1 ? tag + ". " : tag + ", "}
+                                            </Fragment>
+                                        )
+                                    })
+                                }
+
                             </span>
                         </div>
                     </div>
 
                     <h1 className={cx("blog-content-title")}>
-                        Top 10 Toolkits for Deep Learning in 2020 Learning in 2020
+                        {
+                            data.title
+                        }
                     </h1>
                     <img
-                        src="https://tunis.ibthemespro.com/img/blog/blog-post-2.jpg"
+                        src={data.img}
                         alt="img.jpg"
                         className={cx("blog-content-image")}
                     />
-                    <div className={cx("blog-content-detail")}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-blog quote
-Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
+                    <div className={cx("blog-content-detail")} dangerouslySetInnerHTML={{ __html: data.long_description }} />
                 </div>
 
             </div>
         </div>
     )
 }
+
+
+BlogModal.propTypes = {
+    data: PropTypes.object
+}
+
+BlogModal.defaultProps = {
+    data: {
+        title: "",
+        categories: [],
+        tags: [],
+        created_at: "",
+        short_description: "",
+        img: "",
+        long_description: "<p>No content</p>"
+    }
+}
+
 
 export default BlogModal
