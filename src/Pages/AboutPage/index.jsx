@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import classNames from "classnames/bind";
 import styles from './aboutpage.module.css'
@@ -13,10 +13,15 @@ import BoxStatItem from "~/Components/BoxStatItem";
 import SkillSlider from "~/Components/Slider/SkillSlider";
 import StepItems from "~/Components/StepperProfile";
 import Avatar from "~/Components/Avatar";
+import { ContextApi } from "~/GlobalStatesComponent/GlobalState";
+
 
 var cx = classNames.bind(styles);
 
 const AboutPage = () => {
+
+    const { profile } = useContext(ContextApi)
+
 
     useEffect(() => {
         document.title = "About"
@@ -38,18 +43,18 @@ const AboutPage = () => {
                             </h1>
                             <div className={cx("profile")}>
                                 <ul className={cx("profile-list-left")}>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>First name:</span> <span>Tuan Truong</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Age:</span> <span>23</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Freelancer:</span> <span>Available</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Phone:</span> <span>+84 383608951</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Hobbies:</span> <span>Travel, music,...</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>First name:</span> <span>{profile?.firstname}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Age:</span> <span>{profile?.age}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Job:</span> <span>{profile?.job}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Phone:</span> <span>{profile?.phone}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Hobbies:</span> <span>{profile?.hobbies}</span></li>
                                 </ul>
                                 <ul className={cx("profile-list-right")}>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Last name:</span> <span>Nguyen</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Nationlity:</span> <span>VietNam</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Address:</span> <span>HCM City</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Languages:</span> <span>Vietnamese</span></li>
-                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>School:</span> <span>HITU</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Last name:</span> <span>{profile?.lastname}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Nationlity:</span> <span>{profile?.nationality}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Address:</span> <span>{profile?.address}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>Languages:</span> <span>{profile?.languages}</span></li>
+                                    <li className={cx("profile-item")}><span className={cx("profile-item-name")}>School:</span> <span>{profile?.school}</span></li>
                                 </ul>
                             </div>
                             <div className={cx("profile-download-cv-btn")}>
@@ -58,6 +63,7 @@ const AboutPage = () => {
                         </div>
                         <div className={cx("col-right")}>
                             <div className={cx("box-stat-list")}>
+                                    
                                 <BoxStatItem />
                                 <BoxStatItem />
                                 <BoxStatItem />

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "slug": "reactjs",
+        "name": "React Js",
+        "description": "Six months of experience. Understand features such as: life cycle, function components, virtual DOM, fetch API, props, state(local, global), react-hooks(useState, useEffect, useCallback, useMemo,... ), context API, proptypes,..."
+    },
+    {
+        "id": 6,
+        "slug": "laravel-mysql",
+        "name": "LARAVEL/MYSQL",
+        "description": "I can work with laravel MVC and laravel API basic. Features such as routing, view, model, controller, response, request, database migration, sql queries,..."
+    },
+    {
+        "id": "5",
+        "slug": "javascript",
+        "name": "Javascript",
+        "description": "I have 1 year of experence. Futures such as value and variable, data type, loop, function(declarations, expressions and arrow), object, array and array methods, callback, promise, hoisting, scope, closure,..."
+    },
+    {
+        "id": "2",
+        "slug": "html5",
+        "name": "HTML5",
+        "description": "With 1.5 years of experience I can work with HTML5 such as formating text, links and navigation, images and graphics, media element, semantic HTML, HTML table, HTML form,..."
+    },
+    {
+        "id": "3",
+        "slug": "css3",
+        "name": "CSS3",
+        "description": "With 1.5 years of experience I seem to be able to do most styles from easy to difficult. Features such as color, font, DEV tool, grid, flex box, selector, animation, transition,... "
+    },
+    {
+        "id": "4",
+        "slug": "css-libraries",
+        "name": "Css Libraries",
+        "description": "I can work with bootstrap and tailwind css."
+    },    
+    {
+        "id": 7,
+        "slug": "others",
+        "name": "Others",
+        "description": "I can work with SASS and SOCKETIO in node server."
+    }
+]

@@ -12,8 +12,7 @@
     padding: 15px;
     border-radius: 5px ;
     display: flex;
-
-    
+    min-height: 222px;
 }
 
 .skill-item-icon {

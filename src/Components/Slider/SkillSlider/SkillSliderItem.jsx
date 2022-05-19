@@ -1,24 +1,26 @@
 
-import { RiReactjsLine } from 'react-icons/ri';
 
 import classNames from "classnames/bind";
 import styles from './skillslider.module.css'
+import selectedIcon from '~/dummyData/skill-icons';
 
 var cx = classNames.bind(styles);
 
-const SkillSliderItem = () => {
+const SkillSliderItem = ({ data }) => {
+
+
+
+    const IconComponent = selectedIcon(data.slug)
+
     return (
         <div className={cx("skill-item")}>
             <span className={cx("skill-item-icon")}>
-                <RiReactjsLine />
+                <IconComponent />
             </span>
             <div className={cx("skill-item-contents")}>
-                <h2 className={cx("skill-item-name")}>REACT JS</h2>
+                <h2 className={cx("skill-item-name")}>{data.name}</h2>
                 <p className={cx("skill-item-desc")}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-                    mollitia ullam ipsum repellendus possimus porro nulla cupiditate.
-                    Minus qui ut aperiam natus perferendis mollitia officiis illo.
-                    Quas iure adipisci dolore?
+                    {data.description}
                 </p>
 
             </div>

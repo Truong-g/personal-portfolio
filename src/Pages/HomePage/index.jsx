@@ -1,16 +1,22 @@
 import classNames from "classnames/bind";
 import styles from './homepage.module.css'
 
+import { useContext, useEffect } from "react";
 import { FaUserAlt } from 'react-icons/fa'
+
+import { ContextApi } from "~/GlobalStatesComponent/GlobalState";
 
 import DefaultLayout from "~/Components/Layouts/DefaultLayout";
 import Button from "~/Components/Button";
 import Avatar from "~/Components/Avatar";
-import { useEffect } from "react";
+
 
 var cx = classNames.bind(styles);
 
 const HomePage = () => {
+
+    const { profile } = useContext(ContextApi)
+
 
     useEffect(() => {
         document.title = "Home"
@@ -20,7 +26,7 @@ const HomePage = () => {
 
     return (
         <DefaultLayout>
-        <div className={cx("container")}>
+            <div className={cx("container")}>
                 <div className={`${cx("block-color")} primary-bg-color`} />
                 <div className={cx("wrapper")}>
                     <div className={cx("img-card")}>
@@ -30,20 +36,17 @@ const HomePage = () => {
                         <div className={cx("content")}>
                             <div className={cx("content-title")}>
                                 <h1 className={`${cx("content-title-name")} primary-text-color`}>
-                                    I'm Nguyen Tuan Truong
+                                    I'm {profile?.fullname}
                                 </h1>
                                 <h1 className={cx("content-title-job")}>
-                                    Web Developer
+                                    {profile?.job}
                                 </h1>
                             </div>
 
                             <div className={`${cx("content-line")} primary-bg-color`} />
 
                             <div className={cx("content-desc")}>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur molestiae,
-                                    alias, cum animi ipsam quibusdam rem itaque expedita, quos illum deserunt.
-                                    Nulla veniam tenetur aperiam deserunt! Nulla, at ratione? Blanditiis.
-                                </p>
+                                <p>{profile?.description}</p>
                             </div>
 
                             <div className={cx("content-btn")}>
@@ -52,8 +55,8 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-        </div>
-            </DefaultLayout>
+            </div>
+        </DefaultLayout>
     );
 }
 

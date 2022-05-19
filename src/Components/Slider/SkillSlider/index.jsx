@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -5,7 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import classNames from "classnames/bind";
 import styles from './skillslider.module.css'
 import SkillSliderItem from "./SkillSliderItem";
-import { useMemo } from "react";
+
+import skillData from '~/dummyData/skills.json'
 
 
 
@@ -41,24 +43,13 @@ const SkillSlider = () => {
     return (
         <div className={cx("skill-list")}>
             <Slider {...settings}>
-                <div>
-                    <SkillSliderItem />
-                </div>
-                <div>
-                    <SkillSliderItem />
-                </div>
-                <div>
-                    <SkillSliderItem />
-                </div>
-                <div>
-                    <SkillSliderItem />
-                </div>
-                <div>
-                    <SkillSliderItem />
-                </div>
-                <div>
-                    <SkillSliderItem />
-                </div>
+                {
+                    skillData.map(skill => (
+                        <div key={skill.id}>
+                            <SkillSliderItem data={skill} />
+                        </div>
+                    ))
+                }
             </Slider>
         </div>
     );
