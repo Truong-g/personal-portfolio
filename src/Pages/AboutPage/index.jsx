@@ -13,7 +13,11 @@ import BoxStatItem from "~/Components/BoxStatItem";
 import SkillSlider from "~/Components/Slider/SkillSlider";
 import StepItems from "~/Components/StepperProfile";
 import Avatar from "~/Components/Avatar";
+
 import { ContextApi } from "~/GlobalStatesComponent/GlobalState";
+
+import stats from '~/dummyData/stats.json'
+import { Link } from "react-router-dom";
 
 
 var cx = classNames.bind(styles);
@@ -58,16 +62,23 @@ const AboutPage = () => {
                                 </ul>
                             </div>
                             <div className={cx("profile-download-cv-btn")}>
-                                <Button title="Download cv" icon={FaDownload} type="solid" />
+                                <Link
+                                    to="/assets/cv/TUAN-TRUONG-NGUYEN.pdf"
+                                    download
+                                    target="_blank"
+                                >
+                                    <Button title="Download cv" icon={FaDownload} type="solid" />
+                                </Link>
                             </div>
                         </div>
                         <div className={cx("col-right")}>
                             <div className={cx("box-stat-list")}>
-                                    
-                                <BoxStatItem />
-                                <BoxStatItem />
-                                <BoxStatItem />
-                                <BoxStatItem />
+                                {
+                                    stats.map(stat => (
+                                        <BoxStatItem key={stat.id} data={stat} />
+                                    ))
+                                }
+
                             </div>
                         </div>
                     </div>

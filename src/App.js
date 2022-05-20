@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 import { HiSun } from 'react-icons/hi'
 import { BsFillMoonFill } from 'react-icons/bs'
@@ -14,9 +14,12 @@ import Menu from './Components/Menu';
 function App() {
   const { theme, setTheme } = useContext(ContextApi)
 
+  const {pathname} = useLocation()
+ 
+
   return (
     <div className={`app ${theme}`}>
-      <Menu />
+      <Menu path={pathname}/>
       <div className="theme-mode">
         <Button icon={theme === "theme-light" ? BsFillMoonFill : HiSun} onClick={() => {
           setTheme(theme === "theme-light" ? "theme-dark" : "theme-light")

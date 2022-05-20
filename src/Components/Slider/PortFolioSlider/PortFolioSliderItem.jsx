@@ -6,11 +6,13 @@ import styles from './portfolioslider.module.css'
 var cx = classNames.bind(styles);
 
 
-function PortFolioSliderItem() {
+function PortFolioSliderItem({img}) {
+
+
   return (
     <div
       className={cx("potfolio-image")}
-      style={{ backgroundImage: "url('https://tunis.ibthemespro.com/img/projects/project-1.jpg')" }}
+      style={{ backgroundImage: `url(${img})` }}
     />
   )
 }

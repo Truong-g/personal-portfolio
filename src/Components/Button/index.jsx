@@ -15,6 +15,7 @@ const Button = ({
     size = "",
     icon,
     type = "default",
+    isActive = false,
     ...passProps
 }) => {
 
@@ -54,6 +55,7 @@ const Button = ({
 
     return (
         <Comp
+
             className={
                 `btn btn-${size ? size : (width <= 992 ? "small" : "medium")}
                 ${type === "solid" ? "btn-solid" : ""}`
@@ -67,7 +69,7 @@ const Button = ({
                     </span>
                 )
             }
-            <span className={`btn-icon flex-center`}>
+            <span className={`btn-icon flex-center ${isActive ? "active" : ""}`}>
                 {<IconComp />}
             </span>
         </Comp>

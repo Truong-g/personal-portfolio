@@ -4,14 +4,14 @@ import styles from './horizontalrestangleitem.module.css'
 
 var cx = classNames.bind(styles);
 
-function HorizontalRestangleItem() {
+function HorizontalRestangleItem({data}) {
     return (
         <div
             className={cx("item-restangle")}
-            style={{ backgroundImage: `url("https://tunis.ibthemespro.com/img/projects/project-1.jpg")` }}
+            style={{ backgroundImage: `url(${data.img[0]})` }}
         >
             <div className={`${cx("item-restangle-bg")} primary-bg-color`}>
-                <h3 className={cx("item-restangle-title")}>SNEAKERS SHOP</h3>
+                <h3 className={cx("item-restangle-title")}>{data.name}</h3>
             </div>
         </div>
     )

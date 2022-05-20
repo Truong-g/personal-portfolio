@@ -12,11 +12,12 @@ import styles from './portfolioslider.module.css'
 import PortFolioSliderItem from "./PortFolioSliderItem";
 
 
+
 var cx = classNames.bind(styles);
 
 
 
-function PortFolioSlider() {
+function PortFolioSlider({ data }) {
     const sliderRef = useRef()
     const settings = useMemo(() => {
         return {
@@ -37,21 +38,19 @@ function PortFolioSlider() {
 
 
 
+
     return (
         <div className={cx("potfolio-list")}>
             <Slider ref={sliderRef}  {...settings}>
-                <div>
-                    <PortFolioSliderItem />
-                </div>
-                <div>
-                    <PortFolioSliderItem />
-                </div>
-                <div>
-                    <PortFolioSliderItem />
-                </div>
-                <div>
-                    <PortFolioSliderItem />
-                </div>
+                {
+                    data.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                <PortFolioSliderItem img={item} />
+                            </div>
+                        )
+                    })
+                }
             </Slider>
             <button
                 onClick={handleLeftBtn}

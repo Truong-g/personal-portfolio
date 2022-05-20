@@ -5,21 +5,20 @@ import { BsFillBagFill } from 'react-icons/bs'
 
 var cx = classNames.bind(styles);
 
-const StepItem = () => {
+const StepItem = ({ data }) => {
     return (
         <div className={cx("step-item")}>
             <span className={`${cx("step-item-icon")} primary-bg-color`}>
                 <BsFillBagFill />
             </span>
             <div className={cx("step-item-time")}>
-                <span>2013</span>
+                <span>{data?.date}</span>
             </div>
             <h2 className={cx("step-item-title")}>
-                WEB DEVELOPER - <span>ENVATO</span>
+                {data?.title} - <span>{data?.name}</span>
             </h2>
             <p className={cx("step-item-desc")}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, temporibus exercitationem commodi vero enim eaque eum.
+                {data?.description}
             </p>
         </div>
     );

@@ -14,15 +14,22 @@ import WrapperLaypout from "~/Components/Layouts/WrapperLayout";
 import HorizontalRestangleItem from "~/Components/RestangleItem/HorizontalRestangleItem";
 import PortFolioModal from "~/Components/Modals/PortFolioModal";
 
+import projects from '~/dummyData/projects.json'
+
 
 var cx = classNames.bind(styles);
 
 const PortFolioPage = () => {
+    const [list, setList] = useState([])
     const [currentItem, setCurentItem] = useState("1")
-    const [selectedItem, setSelectedItem] = useState("null")
+    const [selectedItem, setSelectedItem] = useState(null)
 
     useEffect(() => {
         document.title = "Portfolio"
+    }, [])
+
+    useEffect(() => {
+        setList(projects)
     }, [])
 
 
@@ -30,13 +37,14 @@ const PortFolioPage = () => {
         setCurentItem(id)
     }, [])
 
-    const handleSetSelected = (id) => {
-        setSelectedItem(id)
+    const handleSetSelected = (item) => {
+        setSelectedItem(item)
     }
 
     const handleCloseModal = useCallback(() => {
         setSelectedItem(null)
     }, [])
+
 
     return (
         <DefaultLayout>
@@ -54,21 +62,18 @@ const PortFolioPage = () => {
                     </div>
 
                     <div className={cx("portfolios")}>
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-                        <HorizontalRestangleItem />
-
+                        {
+                            list.map((project) => (
+                                <div key={project.id} onClick={() => handleSetSelected(project)}>
+                                    <HorizontalRestangleItem data={project} />
+                                </div>
+                            ))
+                        }
                     </div>
                 </WrapperLaypout>
-
                 {
                     !!selectedItem && (
-                        <PortFolioModal onClose={handleCloseModal} />
+                        <PortFolioModal onClose={handleCloseModal} data={selectedItem} />
                     )
                 }
 

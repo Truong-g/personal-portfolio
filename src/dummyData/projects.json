@@ -1,0 +1,126 @@
+[
+    {
+        "id": "1",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "Soci-tt",
+        "technologies": [
+            "ReactJs",
+            "SocketIO",
+            "Redux-thunk",
+            "Laravel",
+            "MySQL"
+        ],
+        "source": "https://github.com/Truong-g/soci-tt",
+        "img": [
+            "/assets/img/socitt/img1.png",
+            "/assets/img/socitt/img2.png",
+            "/assets/img/socitt/img3.png",
+            "/assets/img/socitt/img4.png",
+            "/assets/img/socitt/img5.png",
+            "/assets/img/socitt/img6.png",
+            "/assets/img/socitt/img7.png",
+            "/assets/img/socitt/img8.png",
+            "/assets/img/socitt/img9.png"
+        ],
+        "demo": "https://soci-tt.netlify.app"
+    },
+    {
+        "id": "2",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "NTT SHOP",
+        "technologies": [
+            "ReactJs",
+            "Swipe Js",
+            "Tailwind Css",
+            "Laravel",
+            "MySQL"
+        ],
+        "source": "https://github.com/Truong-g/nttshop",
+        "img": [
+            "/assets/img/nttshop/img1.png",
+            "/assets/img/nttshop/img2.png",
+            "/assets/img/nttshop/img3.png",
+            "/assets/img/nttshop/img4.png",
+            "/assets/img/nttshop/img5.png",
+            "/assets/img/nttshop/img6.png",
+            "/assets/img/nttshop/img7.png",
+            "/assets/img/nttshop/img8.png"
+        ],
+        "demo": "https://shopntt.netlify.app",
+        "note": "Serve store image in this website have problem. I will fix soon"
+    },
+    {
+        "id": "3",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "DONGHO",
+        "technologies": [
+            "HTML/CSS",
+            "Javascript",
+            "Ajax",
+            "Laravel",
+            "MySQL"
+        ],
+        "source": "https://github.com/Truong-g/dongho-laravel-MVC",
+        "img": [
+            "/assets/img/dongho/img1.png",
+            "/assets/img/dongho/img2.png",
+            "/assets/img/dongho/img3.png",
+            "/assets/img/dongho/img4.png",
+            "/assets/img/dongho/img5.png",
+            "/assets/img/dongho/img6.png",
+            "/assets/img/dongho/img7.png",
+            "/assets/img/dongho/img8.png",
+            "/assets/img/dongho/img9.png",
+            "/assets/img/dongho/img10.png",
+            "/assets/img/dongho/img11.png",
+            "/assets/img/dongho/img12.png",
+            "/assets/img/dongho/img13.png"
+
+        ],
+        "demo": "http://dongho.epizy.com/"
+    },
+    {
+        "id": "4",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "Portfolio",
+        "technologies": [
+            "ReactJs",
+            "Module Css",
+            "React-Slick"
+        ],
+        "source": "https://github.com/Truong-g/personal-portfolio",
+        "img": [
+            "/assets/img/portfolio/img1.png",
+            "/assets/img/portfolio/img2.png",
+            "/assets/img/portfolio/img3.png",
+            "/assets/img/portfolio/img4.png",
+            "/assets/img/portfolio/img5.png"
+        ],
+        "demo": "https://ntt-portfolio.netlify.app"
+    },
+    {
+        "id": "5",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "Shop pet",
+        "technologies": [
+            "HTML/CSS",
+            "Javascript"
+        ],
+        "source": "https://github.com/Truong-g/shopet-static-web",
+        "img": [
+            "/assets/img/shoppet/img1.png",
+            "/assets/img/shoppet/img2.png",
+            "/assets/img/shoppet/img3.png",
+            "/assets/img/shoppet/img4.png",
+            "/assets/img/shoppet/img5.png",
+            "/assets/img/shoppet/img6.png"
+        ],
+        "demo": "https://truong-g.github.io/shopet-static-web"
+    }
+    
+]

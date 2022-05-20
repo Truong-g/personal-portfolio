@@ -12,7 +12,7 @@ import routes from "~/Data/JavascriptData/routes";
 var cx = classNames.bind(styles);
 
 
-const Menu = () => {
+const Menu = ({path}) => {
     return (
         <div className={cx('container')}>
 
@@ -21,7 +21,7 @@ const Menu = () => {
                     routes.map((route, index) => {
                         return (
                             <li className={cx("navbar-item")} key={index}>
-                                <Button icon={route.icon} to={route.to} title={route.title}/>
+                                <Button icon={route.icon} to={route.to} title={route.title} isActive={path === route.to} />
                             </li>
                         )
                     })

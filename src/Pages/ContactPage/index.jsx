@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import classNames from "classnames/bind";
@@ -6,6 +6,13 @@ import styles from './contactpage.module.css'
 
 import { HiLocationMarker } from 'react-icons/hi'
 import { FaFacebookF } from 'react-icons/fa'
+import { SiZalo } from 'react-icons/si'
+import { AiFillYoutube, AiFillPhone } from 'react-icons/ai'
+import { CgMail } from 'react-icons/cg'
+
+
+
+
 
 
 import DefaultLayout from "~/Components/Layouts/DefaultLayout";
@@ -13,10 +20,14 @@ import TitlePage from "~/Components/TitlePage";
 import WrapperLaypout from "~/Components/Layouts/WrapperLayout";
 import Button from "~/Components/Button";
 import FormContact from "~/Components/Forms/FormContact";
+import { ContextApi } from "~/GlobalStatesComponent/GlobalState";
 
 var cx = classNames.bind(styles);
 
 const ContactPage = () => {
+
+    const { profile } = useContext(ContextApi)
+
     useEffect(() => {
         document.title = "Contact"
     }, [])
@@ -45,34 +56,34 @@ const ContactPage = () => {
                                             ADDRESS POINT
                                         </h3>
                                         <p className={cx("contact-infors-name")}>
-                                            123 Stree New York City , United States Of America 750065.
+                                            {profile?.address_detail}
                                         </p>
                                     </div>
                                 </li>
                                 <li className={cx("contact-item")}>
                                     <span className={`${cx("contact-infors-icon")} primary-text-color`}>
-                                        <HiLocationMarker />
+                                        <CgMail />
                                     </span>
                                     <div className={cx("contact-infors-content")}>
                                         <h3 className={cx("contact-infors-title")}>
-                                            ADDRESS POINT
+                                            MAIL ME
                                         </h3>
-                                        <Link to="" className={cx("contact-infors-name")}>
-                                            123 Stree New York City , United States Of America 750065.
-                                        </Link>
+                                        <a href={`mailto:${profile?.email}`} className={cx("contact-infors-name")}>
+                                            {profile?.email}
+                                        </a>
                                     </div>
                                 </li>
                                 <li className={cx("contact-item")}>
                                     <span className={`${cx("contact-infors-icon")} primary-text-color`}>
-                                        <HiLocationMarker />
+                                        <AiFillPhone />
                                     </span>
                                     <div className={cx("contact-infors-content")}>
                                         <h3 className={cx("contact-infors-title")}>
-                                            ADDRESS POINT
+                                            PHONE ME
                                         </h3>
-                                        <Link to="" className={cx("contact-infors-name")}>
-                                            123 Stree New York City , United States Of America 750065.
-                                        </Link>
+                                        <a href={`tel:${profile?.phone}`} className={cx("contact-infors-name")}>
+                                            {profile?.phone}
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -82,28 +93,28 @@ const ContactPage = () => {
                                     <Button
                                         size="small"
                                         icon={FaFacebookF}
-                                        href="https://facebook.com"
+                                        href="https://www.facebook.com/ngtuantruong30062k"
                                     />
                                 </li>
                                 <li className={cx("contact-socials-item")}>
                                     <Button
                                         size="small"
-                                        icon={FaFacebookF}
-                                        href="https://facebook.com"
+                                        icon={SiZalo}
+                                        href="https://zalo.me/0383608951"
                                     />
                                 </li>
                                 <li className={cx("contact-socials-item")}>
                                     <Button
                                         size="small"
-                                        icon={FaFacebookF}
-                                        href="https://facebook.com"
+                                        icon={AiFillYoutube}
+                                        href="https://youtube.com"
                                     />
                                 </li>
                                 <li className={cx("contact-socials-item")}>
                                     <Button
                                         size="small"
-                                        icon={FaFacebookF}
-                                        href="https://facebook.com"
+                                        icon={CgMail}
+                                        href="mailto:ngtuantruong30062k@gmail.com"
                                     />
                                 </li>
                             </ul>

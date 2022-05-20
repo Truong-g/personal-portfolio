@@ -3,7 +3,7 @@
         "id": "1",
         "slug": "reactjs",
         "name": "React Js",
-        "description": "Six months of experience. Understand features such as: life cycle, function components, virtual DOM, fetch API, props, state(local, global), react-hooks(useState, useEffect, useCallback, useMemo,... ), context API, proptypes,..."
+        "description": "Six months of experience. Understand features such as: life cycle, function components, fetch API, props, state, react-router-dom, react-redux, react-hooks(useState, useEffect, useCallback, useMemo,... ), context API, proptypes,..."
     },
     {
         "id": 6,

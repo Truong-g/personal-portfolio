@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "date": "2019",
+        "title": "Starting",
+        "name": "HITU",
+        "description": "I started studying at HITU College with a major in information technology."
+    },
+    {
+        "id": 2,
+        "date": "2021",
+        "title": "First project",
+        "name": "DONGHO",
+        "description": "With the knowledge learned in school and at home. I completed my first project in a complete way."
+    },
+    {
+        "id": 3,
+        "date": "2022",
+        "title": "Intership",
+        "name": "Uninontek",
+        "description": "I worked at the technology company Uniontek as an internship for a period of 2 months."
+    },
+    {
+        "id": 4,
+        "date": "2022",
+        "title": "Second project",
+        "name": "NTTSHOP",
+        "description": "With daily experience and knowledge. I completed my second project applying high-level technology."
+    }
+]
