@@ -48,7 +48,29 @@
             "/assets/img/nttshop/img7.png",
             "/assets/img/nttshop/img8.png"
         ],
-        "demo": "https://shopntt.netlify.app",
+        "demo": "https://nttshop.netlify.app",
+        "note": "Serve store image in this website have problem. I will fix soon"
+    },
+    {
+        "id": "2",
+        "start_date": "2021",
+        "end_date": "2022",
+        "name": "Dashboard NTT SHOP",
+        "technologies": [
+            "ReactJs",
+            "Laravel",
+            "MySQL"
+        ],
+        "source": "https://github.com/Truong-g/nttshop",
+        "img": [
+            "/assets/img/db-nttshop/img1.png",
+            "/assets/img/db-nttshop/img2.png",
+            "/assets/img/db-nttshop/img3.png",
+            "/assets/img/db-nttshop/img4.png",
+            "/assets/img/db-nttshop/img5.png"
+
+        ],
+        "demo": "https://nttshop-admin.netlify.app",
         "note": "Serve store image in this website have problem. I will fix soon"
     },
     {
