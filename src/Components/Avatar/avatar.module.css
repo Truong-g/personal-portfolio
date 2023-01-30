@@ -12,10 +12,13 @@
 
 :global(.theme-dark) .img {
     border-color: #323232;
+    background-color: #000;
+
 }
 
 :global(.theme-light) .img {
     border-color: #ddd;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 992px) {
